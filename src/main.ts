@@ -4,7 +4,7 @@ import type {Options} from './types.js';
 
 type CodemodName = keyof typeof codemods;
 
-export const unpluginFactory: UnpluginFactory<Options | undefined> = (
+export const unpluginFactory: UnpluginFactory<Options | undefined, false> = (
   options
 ) => {
   const includedCodemods = options?.include;
