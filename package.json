@@ -1,0 +1,84 @@
+{
+  "name": "@e18e/unplugin-replacements",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "An unplugin for replacing syntax and modules with e18e recommendations",
+  "license": "MIT",
+  "homepage": "https://github.com/e18e/unplugin-replacements",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e18e/unplugin-replacements.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e18e/unplugin-replacements/issues"
+  },
+  "keywords": [
+    "unplugin",
+    "e18e",
+    "replacements"
+  ],
+  "main": "./lib/main.js",
+  "files": [
+    "lib",
+    "!lib/**/*.test.js"
+  ],
+  "scripts": {
+    "build": "tsgo",
+    "format": "prettier --write src",
+    "lint:js": "eslint src",
+    "lint:format": "prettier --check src",
+    "lint": "npm run lint:js && npm run lint:format",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@farmfe/core": ">=1",
+    "@nuxt/kit": "^3",
+    "@nuxt/schema": "^3",
+    "esbuild": "*",
+    "rollup": "^3",
+    "vite": ">=3",
+    "webpack": "^4 || ^5"
+  },
+  "peerDependenciesMeta": {
+    "@farmfe/core": {
+      "optional": true
+    },
+    "@nuxt/kit": {
+      "optional": true
+    },
+    "@nuxt/schema": {
+      "optional": true
+    },
+    "esbuild": {
+      "optional": true
+    },
+    "rollup": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    },
+    "webpack": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@e18e/web-features-codemods": "^0.2.0",
+    "unplugin": "^2.3.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@nuxt/kit": "^4.2.2",
+    "@nuxt/schema": "^4.2.2",
+    "@types/node": "^25.0.0",
+    "@typescript/native-preview": "^7.0.0-dev.20251210.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.7.4",
+    "rollup": "^4.53.3",
+    "typescript-eslint": "^8.49.0",
+    "vite": "^7.2.7",
+    "vitest": "^4.0.15",
+    "webpack": "^5.103.0"
+  }
+}
