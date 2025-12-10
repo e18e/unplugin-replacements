@@ -5,6 +5,20 @@
 > [!WARNING]
 > This plugin is experimental and not yet published publicly. Use at your own risk.
 
+## What is this?
+
+This plugin automatically transforms your code at build time to use modern web platform features, improving performance and reducing bundle size.
+
+**Example:**
+
+```js
+// before
+const lastItem = array[array.length - 1];
+
+// after: modern Array#at() method
+const lastItem = array.at(-1);
+```
+
 ## Install
 
 ```bash
@@ -25,6 +39,35 @@ export default defineConfig({
   ]
 })
 ```
+
+## Options
+
+### `include`
+
+Type: `Array<string>`
+
+Specify which codemods to include. When provided, only the listed transformations will be applied.
+
+```ts
+replacements({
+  include: ['arrayAt', 'objectHasOwn']
+})
+```
+
+### `exclude`
+
+Type: `Array<string>`
+
+Specify which codemods to exclude. All transformations will be applied except those listed.
+
+```ts
+replacements({
+  exclude: ['arrayAt']
+})
+```
+
+> [!NOTE]
+> Available codemod names come from [@e18e/web-features-codemods](https://github.com/e18e/web-features-codemods).
 
 ## License
 
