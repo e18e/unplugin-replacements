@@ -18,6 +18,18 @@
     "replacements"
   ],
   "main": "./lib/main.js",
+  "exports": {
+    ".": "./lib/main.js",
+    "./lib/*.js": "./lib/*.js",
+    "./farm": "./lib/farm.js",
+    "./nuxt": "./lib/nuxt.js",
+    "./vite": "./lib/vite.js",
+    "./astro": "./lib/astro.js",
+    "./rollup": "./lib/rollup.js",
+    "./rspack": "./lib/rspack.js",
+    "./esbuild": "./lib/esbuild.js",
+    "./webpack": "./lib/webpack.js"
+  },
   "files": [
     "lib",
     "!lib/**/*.test.js"
