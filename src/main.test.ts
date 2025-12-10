@@ -19,7 +19,7 @@ describe('unpluginFactory', () => {
     expect(idFilter.test('foo.ts')).toBe(true);
     const source = `const arr = [1, 2, 3]; console.log(arr[arr.length - 1]);`;
 
-    const result = await handler.call(null, source, 'foo.ts');
+    const result = await handler.call(null as never, source, 'foo.ts');
 
     expect(result).toBe(`const arr = [1, 2, 3]; console.log(arr.at(-1));`);
   });
@@ -46,7 +46,7 @@ describe('unpluginFactory', () => {
       const includes = arr.indexOf(1) !== -1;
     `;
 
-    const result = await handler.call(null, source, 'foo.ts');
+    const result = await handler.call(null as never, source, 'foo.ts');
 
     expect(result).toBe(`const arr = [1, 2, 3];
       console.log(arr.at(-1));
@@ -77,7 +77,7 @@ describe('unpluginFactory', () => {
       const includes = arr.indexOf(1) !== -1;
     `;
 
-    const result = await handler.call(null, source, 'foo.ts');
+    const result = await handler.call(null as never, source, 'foo.ts');
 
     expect(result).toBe(`const arr = [1, 2, 3];
       console.log(arr[arr.length - 1]);
@@ -103,7 +103,7 @@ describe('unpluginFactory', () => {
       const includes = arr.indexOf(1) !== -1;
     `;
 
-    const result = await handler.call(null, source, 'foo.ts');
+    const result = await handler.call(null as never, source, 'foo.ts');
 
     expect(result).toBe(`const arr = [1, 2, 3];
       console.log(arr.at(-1));
