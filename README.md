@@ -69,6 +69,14 @@ replacements({
 > [!NOTE]
 > Available codemod names come from [@e18e/web-features-codemods](https://github.com/e18e/web-features-codemods).
 
+## Related Projects
+
+- [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin) - ESLint plugin suggesting and autofixing modernizations and performance improvements.
+- [@e18e/web-features-codemods](https://github.com/e18e/web-features-codemods) - Collection of codemods used to migrate codebases to modern web platform features.
+- [@e18e/cli](https://github.com/e18e/cli) - CLI tool to run the codemods interactively on your codebase and analyze your project for other performance opportunities.
+- [@e18e/mcp](https://github.com/e18e/mcp) - MCP server which advises agents on modernizations and performance improvements.
+- [module-replacements](https://github.com/es-tooling/module-replacements) - A community maintained data set of modern module replacements.
+
 ## License
 
 MIT
